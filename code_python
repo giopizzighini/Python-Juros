@@ -1,0 +1,23 @@
+divida = float(input("Digite o valor de sua divida:  "))
+
+def tabela_modelo():
+    print("Quantidade de Parcelas \t\t % Juros sobre o valor inicial da divida")
+    print("----------------------------------------------------------------------")
+    print("%d \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t %d" % (1,0))
+    print("%d \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t %d" % (3,10))
+    print("%d \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t %d" % (6, 15))
+    print("%d \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t %d" % (9, 20))
+    print("%d \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t %d" % (12, 25))
+
+def tabela_calc():
+    print("Valor da Divida \t\t  Valor do Juros \t\t Quantidade de Parcelas \t\t Valor da Paracela")
+    print("R$ %.2f               \t\t  %.2f                  \t\t 1                                        \t\t %.2f                     " % ((divida*(1+0)), (divida*0),(divida*(1+0)/1)))
+    print("R$ %.2f               \t\t  %.2f                  \t\t 3                                        \t\t %.2f                     " % ((divida *(1 + 0.10)), (divida * 0.10), (divida * (1 + 0) / 3)))
+    print("R$ %.2f               \t\t  %.2f                  \t\t 6                                        \t\t %.2f                     " % ((divida * (1 + 0.15)), (divida * 0.15), (divida * (1 + 0) / 6)))
+    print("R$ %.2f               \t\t  %.2f                  \t\t 9                                        \t\t %.2f                     " % ((divida * (1 + 0.20)), (divida * 0.20), (divida * (1 + 0) / 9)))
+    print("R$ %.2f               \t\t  %.2f                  \t\t 12                                      \t\t %.2f                     " % ((divida * (1 + 0.25)), (divida * 0.25), (divida * (1 + 0) / 12)))
+
+print("\nVeja a tabela abaixo para referencia: \n")
+tabela_modelo()
+print("\n")
+tabela_calc()
